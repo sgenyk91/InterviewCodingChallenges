@@ -1,0 +1,95 @@
+/*CSS reset for elements used in DOM*/
+html, body, div, span, section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  font-family: Helvetica;
+}
+
+.sap-calendar {
+  width: 700px;
+  margin: 0 auto;
+  overflow:hidden;
+  padding: 20px 0;
+}
+
+.sap-calendarTime {
+  display: inline-block;
+  float: left;
+  width: 80px;
+  text-align: right;
+}
+
+.sap-calendarTime-wrapper {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+.sap-calendarTime-hour {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.sap-calendarTime-hour, .sap-calendarTime-halfHour {
+  height: 30px;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.sap-calendarTime-halfHour, .sap-calendarTime-ampm {
+  font-size: 9px;
+  color: #CFCFCF;
+  padding-right: 5px;
+}
+
+.sap-calendarEvents {
+  display: inline-block;
+  width: 620px;
+  height: 720px;
+  padding: 0 10px;
+  margin-top: 15px;
+  float: left;
+  box-sizing: border-box;
+  background-color: #ECECEC;
+  border-left: 1px solid #D9D9D9;
+}
+
+.sap-calendarEvents-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.sap-calendarEvents-event {
+  position: absolute;
+  box-sizing: border-box;
+  border: 1px solid #E5E5E5;
+  border-left: 3px solid #4BAE87;
+  background-color: #FFFFFF;
+  display: inline-block;
+}
+
+.sap-calendarEvents-eventTitle {
+  color: #4BAE87;
+  font-size: 12px;
+  padding: 5px 0 2px 5px;
+  font-weight: 600;
+}
+
+.sap-calendarEvents-eventLocation {
+  font-size: 9px;
+  padding-left: 5px;
+}
+
+.sap-calendarEvents-eventTitle, .sap-calendarEvents-eventLocation {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
