@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Building Connected Coding Challenge</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <nav class="bc-nav">
+      <div class="bc-logo-container">
+        <img class="bc-logo" src="./images/bc-logo.png">
+      </div>
+      <div class="bc-filterButton-container">
+        <button class="bc-filterButton-button" onclick="toggleFilterMenu()">
+          <img class="bc-filterButton-icon" src="./images/bc-filter-icon.ico">
+        </button>
+      </div>
+      <div class="bc-form-container">
+        <form class="bc-form">
+          <input id="bc-form-filter" type="text" name="filterCompanies" placeholder="Search" onkeydown="keyPressHandler()">
+        </form>
+      </div>
+    </nav>
+    <section id="bc-filter-section" class="bc-filter-section hidden">
+      <div class="bc-filter-laborTypeContainer">
+        <div class="bc-filter-menu">Refine by</div>
+        <form class="bc-filter-laborType">
+          <div class="bc-filter-title">Labor Type</div>
+          <div class="bc-filter-checkboxContainer">
+            <input class="bc-union" id="bc-union" type="checkbox" name="Union" onclick="adjustLaborTypeFilter(this)">
+            <label for="bc-union">Union</label>
+          </div>
+          <div class="bc-filter-checkboxContainer">
+            <input class="bc-nonunion" id="bc-nonunion" type="checkbox" name="Non-Union" onclick="adjustLaborTypeFilter(this)">
+            <label for="bc-nonunion">Non-Union</label>
+          </div>
+          <div class="bc-filter-checkboxContainer">
+            <input class="bc-prevailingwages" id="bc-prevailingwages" type="checkbox" name="Prevailing Wages" onclick="adjustLaborTypeFilter(this)">
+            <label for="bc-prevailingwages">Prevailing Wages</label>
+          </div>
+          <div class="bc-filter-checkboxContainer">
+            <input class="bc-none" id="bc-none" type="checkbox" name="None" onclick="adjustLaborTypeFilter(this)">
+            <label for="bc-none">None</label>
+          </div>
+        </form>
+      </div>
+    </section>
+    <section class="bc-company-section">
+      <div id="bc-company-list"></div>
+    </section>
+    <script type="text/javascript" src="./app.js"></script>
+  </body>
+</html>
