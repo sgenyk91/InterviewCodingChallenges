@@ -1,0 +1,108 @@
+/*CSS reset for elements used in DOM*/
+* {
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+a:hover, a:focus {
+  outline: none;
+}
+
+.tm-mainContainer {
+  width: 100%;
+  text-align: center;
+}
+
+.tm-main-title {
+  font-size: 36px;
+}
+
+.tm-main-tagline {
+  font-size: 18px;
+}
+
+#tm-productList {
+  display: none;
+}
+
+.tm-product-container {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.tm-product {
+  position: relative;
+  width: 100%;
+  border: 1px solid #AAAAAA;
+}
+
+.tm-product-remove {
+  position: absolute;
+  font-weight: bold;
+  width: 25px;
+  height: 25px;
+  right: -10px;
+  top: -10px;
+  border: 2px solid #000000;
+  border-radius: 30px;
+  background-color: #EEEEEE;
+  z-index: 5;
+  cursor: pointer;
+}
+
+.tm-product-imageContainer {
+  position: relative;
+}
+
+.tm-product-image {
+  width: 100%;
+  min-height: 240px;
+  background-color: #EEEEEE;
+  max-height: 500px;
+}
+
+@media (min-width: 768px) {
+  .tm-product-image {
+    max-height: 245px;
+  }
+}
+
+.tm-product a {
+  display: block;
+}
+
+.tm-product-title, .tm-product-tagline {
+  color: #0096FF;
+}
+
+.tm-product-title {
+  font-size: 16px;
+}
+
+.tm-product-tagline {
+  font-size: 16px;
+}
+
+.tm-product-descriptionContainer {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.75);
+  top: 0;
+  height: 100%;
+  display: none;
+}
+
+.tm-product-description {
+  font-size: 12px;
+  line-height: 22px;
+  padding: 10px;
+  color: #FFFFFF;
+}
+
+#tm-loadSpinner {
+  display: none;
+  text-align: center;
+}
